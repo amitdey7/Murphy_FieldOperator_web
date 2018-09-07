@@ -1,0 +1,52 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:l="sap.ui.layout" xmlns:f="sap.ui.layout.form">
+	<Dialog contentWidth="700px">
+		<customHeader>
+			<Bar>
+				<contentRight>
+					<Button icon="sap-icon://sys-cancel" press="onClosefrag"></Button>
+				</contentRight>
+				<contentMiddle>
+					<Label text="Task Action" design="Bold"/>
+				</contentMiddle>
+			</Bar>
+		</customHeader>
+		<content>
+			<HBox>
+				<l:Grid defaultSpan="L6 M6 S12" width="100%" class="sapUiSizeCompact sapUiSmallMarginTop">
+					<l:content>
+						<HBox>
+							<Label text="{i18n>TaskClass}" class="murphyAdminFormLbl2Class"/>
+							<Text text="{oTaskDetailsModel>/desc}"></Text>
+						</HBox>
+						<HBox>
+							<Label text="{i18n>SUBCLASSIFICATION}" class="murphyAdminFormLbl2Class"/>
+							<Text text="{oTaskDetailsModel>/subDesc}"></Text>
+						</HBox>
+						<HBox>
+							<Label text="{i18n>LOCATION}" class="murphyAdminFormLbl2Class"/>
+							<Text text="{oTaskDetailsModel>/location}"></Text>
+						</HBox>
+						<HBox>
+							<Label text="{i18n>TaskOwner}" class="murphyAdminFormLbl2Class"/>
+							<Text text="{oTaskDetailsModel>/taskOwner}"></Text>
+						</HBox>
+						<HBox>
+							<Label text="{i18n>CreatedBy}" class="murphyAdminFormLbl2Class"/>
+							<Text text="{oTaskDetailsModel>/createdBy}"></Text>
+						</HBox>
+						<HBox>
+							<Label text="{i18n>STATUS}" class="murphyAdminFormLbl2Class"/>
+							<Text text="{oTaskDetailsModel>/status}"></Text>
+						</HBox>
+					</l:content>
+				</l:Grid>
+			</HBox>
+		</content>
+		<beginButton>
+			<Button icon="sap-icon://accept" text="{i18n>MarkResolve}" press = "onResolve"></Button>
+		</beginButton>
+		<endButton>
+			<Button icon="sap-icon://undo" text="{i18n>RETURN}" press = "onReturn"></Button>
+		</endButton>
+	</Dialog>
+</core:FragmentDefinition>

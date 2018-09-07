@@ -1,0 +1,49 @@
+{
+  "welcomeFile": "/webapp/index.html",
+  "routes": [
+    {
+      "path": "/resources",
+      "target": {
+        "type": "service",
+        "name": "sapui5",
+        "entryPath": "/resources"
+      },
+      "description": "SAPUI5 Resources"
+    },
+    {
+      "path": "/taskmanagementRest",
+      "target": {
+        "type": "destination",
+        "name": "JavaAPI_Dest"
+      },
+      "description": "Destination for Murphy Task Management"
+    }, 
+    {
+		"path": "/destination/MurphyCloudIdPDest",
+		"target": {
+			"type": "destination",
+			"name": "MurphyCloudIdPDest",
+			"entryPath": "/"
+		},
+		"description": "Used for Murphy IdP APIs"
+
+	},
+    {
+      "path": "/test-resources",
+      "target": {
+        "type": "service",
+        "name": "sapui5",
+        "entryPath": "/test-resources"
+      },
+      "description": "SAPUI5 Test Resources"
+    },
+    {
+		"path": "/services/userapi",
+		"target": {
+			"type": "service",
+			"name": "userapi"
+		}
+	}
+  ],
+  "sendWelcomeFileRedirect": true
+}

@@ -1,0 +1,54 @@
+<mvc:View controllerName="com.Murphy.FieldTaskFieldTask.controller.View1" xmlns:html="http://www.w3.org/1999/xhtml"
+	xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m">
+	<App>
+		<pages>
+			<Page title="{i18n>title}" enableScrolling="true" class="iopPageBckgrnd iopFontClass weight">
+				<content>
+					<Table id="idFieldUsersTbl" items="{oAllUsersModel>/taskList}" class="murphyTableHeader sapUiSizeCompact">						<columns>
+							<Column minScreenWidth="Tablet" demandPopin="true" width="15%">
+								<Label text="{i18n>LOCATION}" design="Bold"/>
+							</Column>
+							<Column minScreenWidth="Tablet" demandPopin="true" width="15%">
+								<Label text="{i18n>TaskClass}" design="Bold"/>
+							</Column>
+							<Column minScreenWidth="Tablet" demandPopin="true" width="15%">
+								<Label text="{i18n>SUBCLASSIFICATION}" design="Bold"/>
+							</Column>
+							<Column minScreenWidth="Tablet" demandPopin="true" width="25%">
+								<Label text="{i18n>CreatedBy}" design="Bold"/>
+							</Column>
+							<Column minScreenWidth="Tablet" demandPopin="true" width="15%">
+								<Label text="{i18n>TaskOwner}" design="Bold"/>
+							</Column>
+							<Column minScreenWidth="Tablet" demandPopin="true" width="20%">
+								<Label text="{i18n>LATESTCOMMENT}" design="Bold"/>
+							</Column>
+							<Column minScreenWidth="Tablet" demandPopin="true" width="25%">
+								<Label text="{i18n>STATUS}" design="Bold"/>
+							</Column>
+							<Column minScreenWidth="Tablet" demandPopin="true" width="8%">
+								<Label text="" design="Bold"/>
+							</Column>
+						</columns>
+						<items>
+							<ColumnListItem type="Active">
+								<cells>
+									<Text text="{oAllUsersModel>location}"/>
+									<Text text="{oAllUsersModel>desc}"/>
+									<Text text="{oAllUsersModel>subDesc}"/>
+									<Text text="{oAllUsersModel>createdBy}"/>
+									<Text text="{oAllUsersModel>taskOwner}"/>
+									<Text text="{oAllUsersModel>latestComment}"/>
+									<Text text="{oAllUsersModel>status}"/>
+									<HBox>
+										<Button text="" type="Default" icon ="sap-icon://navigation-right-arrow" press="onMyReqItemPress"></Button>
+									</HBox>
+								</cells>
+							</ColumnListItem>
+						</items>
+					</Table>
+				</content>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>
